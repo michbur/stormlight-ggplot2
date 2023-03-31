@@ -5,7 +5,7 @@ library(Cairo)
 font_add(family = "AlethiTS_lined", regular = "AlethiTS Fontv2/AlethiTS_lined.ttf")
 
 p <- ggplot() +
-  annotate("text", x = 1, y = 1, label = "Journey before destination",
+  annotate("text", x = 1, y = 1, label = ".Journey before destination",
            family = "AlethiTS_lined", size = 17) +
   theme_void() +
   theme(plot.background = element_rect(fill = NA, color = NA))
