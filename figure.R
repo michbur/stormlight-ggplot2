@@ -12,9 +12,12 @@ showtext_auto()
 #   theme_void() +
 #   theme(plot.background = element_rect(fill = NA, color = NA))
 
-p <- ggplot(mtcars, aes(x = mpg, y = disp, color = cyl)) +
+p <- ggplot(mtcars, aes(x = mpg, y = disp)) +
   geom_point() +
-  theme_bw(base_family = "AlethiTS_lined")
+  scale_x_continuous("Miles/(US) gallon") +
+  scale_y_continuous("Displacement (cu.in.)") +
+  theme_bw(base_family = "AlethiTS_lined") +
+  theme(legend.position = "bottom")
 
 CairoPS("text.ps", height = 18, width = 18, bg = "transparent")
 p
