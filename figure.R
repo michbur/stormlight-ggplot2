@@ -19,21 +19,11 @@ p <- ggplot(mtcars, aes(x = mpg, y = disp)) +
   theme_bw(base_family = "AlethiTS_lined") +
   theme(legend.position = "bottom")
 
-CairoPS("text.ps", height = 18, width = 18, bg = "transparent")
+CairoPS("text.ps", height = 6, width = 6, bg = "transparent")
 p
 dev.off()
 
 CairoPNG("text.png", height = 480, width = 480, bg = "transparent", 
          pointsize = 10, res = 100)
-p
-dev.off()
-
-CairoJPEG("text.jpeg", height = 480, width = 480, bg = "transparent", 
-         pointsize = 10, res = 1800, quality = 160)
-p
-dev.off()
-
-CairoTIFF("text.tiff", height = 480, width = 480, bg = "transparent", 
-          pointsize = 10, res = 1800, quality = 160)
 p
 dev.off()
