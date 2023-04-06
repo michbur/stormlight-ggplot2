@@ -16,8 +16,9 @@ p <- ggplot(mtcars, aes(x = mpg, y = disp)) +
   geom_point() +
   scale_x_continuous("Miles/(US) gallon") +
   scale_y_continuous("Displacement (cu.in.)") +
-  theme_bw(base_family = "AlethiTS_lined") +
-  theme(legend.position = "bottom")
+  theme_bw() +
+  theme(legend.position = "bottom",
+        axis.title = element_text(family = "AlethiTS_lined"))
 
 CairoPS("text.ps", height = 6, width = 6, bg = "transparent")
 p
