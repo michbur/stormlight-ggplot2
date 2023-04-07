@@ -1,19 +1,26 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
 
 # Alethi font in ggplot2
 
 This repository contains:
 
-- the Alethi font, as created by turos of tempered steel (obtained from
-  <https://www.17thshard.com/forum/topic/2285-alethi-font-and-transliterator-re-launch/>).
-- the code examples for the usege of the Alethi font in ggplot2.
+ - the Alethi font, as created by turos of tempered steel (obtained from https://www.17thshard.com/forum/topic/2285-alethi-font-and-transliterator-re-launch/).
+ - the code examples for the usege of the Alethi font in ggplot2.
 
-``` r
+```{r example}
 library(ggplot2)
 library(showtext)
-#> Loading required package: sysfonts
-#> Loading required package: showtextdb
 
 font_add(family = "AlethiTS_lined", regular = "AlethiTS Fontv2/AlethiTS_lined.ttf")
 
@@ -27,5 +34,3 @@ ggplot(mtcars, aes(x = mpg, y = disp)) +
   theme(legend.position = "bottom",
         axis.title = element_text(family = "AlethiTS_lined"))
 ```
-
-![](README_files/figure-gfm/example-1.png)<!-- -->
