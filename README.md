@@ -30,3 +30,5 @@ ggplot(mtcars, aes(x = mpg, y = disp)) +
 ```
 
 ![](README_files/figure-gfm/example-1.png)<!-- -->
+
+*Journey before destination*.
