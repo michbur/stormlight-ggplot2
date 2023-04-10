@@ -9,6 +9,10 @@ This repository contains:
   <https://www.17thshard.com/forum/topic/2285-alethi-font-and-transliterator-re-launch/>).
 - the code examples for the usege of the Alethi font in ggplot2
   (**figure.R**).
+- the dataset on the eyebrow raising was created by
+  [Ning1253](https://github.com/Ning1253) and published here:
+  <https://github.com/Ning1253/StormlightBlush/>. I converted it to .csv
+  using **get-data.R**.
 
 ``` r
 library(ggplot2)
