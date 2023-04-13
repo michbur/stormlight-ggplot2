@@ -24,15 +24,17 @@ font_add(family = "AlethiTS_lined", regular = "AlethiTS Fontv2/AlethiTS_lined.tt
 
 showtext_auto()
 
-ggplot(mtcars, aes(x = mpg, y = disp)) +
-  geom_point() +
-  scale_x_continuous("Miles/(US) gallon") +
-  scale_y_continuous("Displacement (cu.in.)") +
+dat <- read.csv("stormlight-blushes.csv")
+
+p <- ggplot(dat, aes(x = char, y = blushes)) +
+  geom_col() +
+  scale_x_discrete("Character") +
+  scale_y_continuous("Number of blushes") +
+  coord_flip() +
   theme_bw() +
   theme(legend.position = "bottom",
-        axis.title = element_text(family = "AlethiTS_lined"))
+        axis.title = element_text(family = "AlethiTS_lined"),
+        axis.text.y = element_text(family = "AlethiTS_lined", size = 3))
 ```
-
-![](README_files/figure-gfm/example-1.png)<!-- -->
 
 *Journey before destination*.

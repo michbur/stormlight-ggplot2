@@ -6,19 +6,17 @@ font_add(family = "AlethiTS_lined", regular = "AlethiTS Fontv2/AlethiTS_lined.tt
 
 showtext_auto()
 
-# p <- ggplot() +
-#   annotate("text", x = 1, y = 1, label = ".Journey before destination",
-#            family = "AlethiTS_lined", size = 17) +
-#   theme_void() +
-#   theme(plot.background = element_rect(fill = NA, color = NA))
+dat <- read.csv("stormlight-blushes.csv")
 
-p <- ggplot(mtcars, aes(x = mpg, y = disp)) +
-  geom_point() +
-  scale_x_continuous("Miles/(US) gallon") +
-  scale_y_continuous("Displacement (cu.in.)") +
+p <- ggplot(dat, aes(x = char, y = blushes)) +
+  geom_col() +
+  scale_x_discrete("Character") +
+  scale_y_continuous("Number of blushes") +
+  coord_flip() +
   theme_bw() +
   theme(legend.position = "bottom",
-        axis.title = element_text(family = "AlethiTS_lined"))
+        axis.title = element_text(family = "AlethiTS_lined"),
+        axis.text.y = element_text(family = "AlethiTS_lined", size = 3))
 
 CairoPS("text.ps", height = 6, width = 6, bg = "transparent")
 p
